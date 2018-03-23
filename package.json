@@ -1,0 +1,30 @@
+{
+  "name": "full-stack-webstie",
+  "version": "1.0.0",
+  "description": "a test for back-end",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development nodemon ./server.js --exec babel-node"
+  },
+  "repository": "https://github.com/yunyixin/full-stack-webstie.git",
+  "author": "yunyi <yunyixin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.11",
+    "nodemon": "^1.17.2",
+    "shortid": "^2.2.8"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-import": "^1.6.7",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^4.19.1"
+  }
+}
