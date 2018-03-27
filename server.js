@@ -50,17 +50,17 @@ app.listen(config.port, function () {
 });
 
 // 连接mongodb数据库
-// mongoose.connect("mongodb://localhost:27017/myDemo");
-// const db = mongoose.connection;
-//
-// db.once('open', function () {
-//   console.log("Mongodb Connected, the database is myDemo");
-//   app.listen(8888);
-// });
-//
-// db.on('error', console.error.bind(console, "Mongoose Connection Error"));
-//
-// db.on('close', function () {
-//   console.log('数据库断开，重新连接数据库');
-//   // mongoose.connect(config.url, {server:{auto_reconnect:true}});
-// });
+mongoose.connect("mongodb://localhost:27017/myDemo");
+const db = mongoose.connection;
+
+db.once('open', function () {
+  console.log("Mongodb Connected, the database is myDemo");
+  // app.listen(8888);
+});
+
+db.on('error', console.error.bind(console, "Mongoose Connection Error"));
+
+db.on('close', function () {
+  console.log('数据库断开，重新连接数据库');
+  // mongoose.connect(config.url, {server:{auto_reconnect:true}});
+});
